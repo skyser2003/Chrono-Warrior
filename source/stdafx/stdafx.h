@@ -1,0 +1,41 @@
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+// Including SDKDDKVer.h defines the highest available Windows platform.
+
+// If you wish to build your application for a previous Windows platform, include WinSDKVer.h and
+// set the _WIN32_WINNT macro to the platform you wish to support before including SDKDDKVer.h.
+
+#include <SDKDDKVer.h>
+
+#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+// Windows Header Files:
+#include <windows.h>
+
+// C RunTime Header Files
+#include <stdlib.h>
+#include <malloc.h>
+#include <memory.h>
+#include <tchar.h>
+
+// DirectX
+#include <dxgi.h>
+#include <d3dcommon.h>
+#include <d3d11.h>
+#include <d3dx10math.h>
+#include <D3DX11tex.h>
+
+// STL
+#include <memory>
+#include <map>
+#include <vector>
+#include <functional>
+#include <chrono>
+#include <set>
+
+// TODO: reference additional headers your program requires here
+#include "Extern/tinyxml2/tinyxml2.h"
