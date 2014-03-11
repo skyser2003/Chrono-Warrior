@@ -1,0 +1,15 @@
+[submodule "FG_DX_Engine"]
+	path = FG_DX_Engine
+	url = https://github.com/skyser2003/FG_DX_Engine
+[submodule "FG_UI_Engine"]
+	path = FG_UI_Engine
+	url = https://github.com/skyser2003/FG_UI_Engine
+[submodule "FG_Time_Engine"]
+	path = FG_Time_Engine
+	url = https://github.com/skyser2003/FG_Time_Engine
+[submodule "FG_Input_Library"]
+	path = FG_Input_Library
+	url = https://github.com/skyser2003/FG_Input_Library
+[submodule "FG_Window_Library"]
+	path = FG_Window_Library
+	url = https://github.com/skyser2003/FG_Window_Library
