@@ -33,8 +33,8 @@ namespace CW
 		mKeyboard.reset(new FG::KeyboardInput);
 		mMouse.reset(new FG::MouseInput);
 
-		window->RegisterInput(mKeyboard.get());
-		window->RegisterInput(mMouse.get());
+		window->RegisterInput(mKeyboard);
+		window->RegisterInput(mMouse);
 		mMouse->SetScreenSize(window->GetScreenWidth(), window->GetScreenHeight());
 
 		InitializeGraphics();
