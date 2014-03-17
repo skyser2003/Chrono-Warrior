@@ -89,10 +89,10 @@ namespace CW
 		auto& tm = mCanvas->GetTextureManager();
 		tm.SetDevice(mCanvas->GetDevice());
 
-		mLemon = tm.CreateTexture("Data/lemon.jpg");
-		mApple = tm.CreateTexture("Data/apple.jpg");
-		mSoldier = tm.CreateTexture("Data/scv.jpg");
-		mMage = tm.CreateTexture("Data/mage.jpg");
+		mLemon = tm.CreateTexture("../Data/img/lemon.jpg");
+		mApple = tm.CreateTexture("../Data/img/apple.jpg");
+		mSoldier = tm.CreateTexture("../Data/img/scv.jpg");
+		mMage = tm.CreateTexture("../Data/img/mage.jpg");
 	}
 
 	void GameMode::DrawTile(Tile* tile)

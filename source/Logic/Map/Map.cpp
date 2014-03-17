@@ -18,7 +18,7 @@ namespace CW
 
 	void Map::Initialize()
 	{
-		std::string xmlName = "Stage/stage1.xml";
+		std::string xmlName = "../Stage/stage1.xml";
 		tinyxml2::XMLDocument doc;
 		doc.LoadFile(xmlName.c_str());
 
