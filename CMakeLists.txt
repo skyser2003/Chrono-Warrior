@@ -6,8 +6,7 @@ INCLUDE( msvc_support )
 RUNTIME_LIBRARY_OPTION(Release /MT)
 RUNTIME_LIBRARY_OPTION(Debug /MTd)
 
-SET(SOLUTION_NAME "Chrono Warrior")
-SET(PROJECT_NAME "Chrono Warrior")
+SET(PROJECT_NAME "Chrono_Warrior")
 SET(SOURCE "source")
 
 PROJECT (${PROJECT_NAME})
@@ -34,21 +33,21 @@ SET (CW_PCH_BIN ${CW_PCH_NAME}.pch)
 
 SET(CW_SOURCE_SUBDIRS
 "Extern"
-"Extern\\\\tinyxml2"
+"Extern/tinyxml2"
 "Game"
 "Logic"
-"Logic\\\\FieldObject"
-"Logic\\\\FieldObject\\\\FieldObject"
-"Logic\\\\FieldObject\\\\FieldUnit"
-"Logic\\\\Map"
-"Logic\\\\Position"
-"Logic\\\\Projectile"
-"Logic\\\\Tile"
+"Logic/FieldObject"
+"Logic/FieldObject/FieldObject"
+"Logic/FieldObject/FieldUnit"
+"Logic/Map"
+"Logic/Position"
+"Logic/Projectile"
+"Logic/Tile"
 "Main"
 "Mode"
-"Mode\\\\GameMode"
-"Mode\\\\Mode"
-"Mode\\\\StartMenuMode"
+"Mode/GameMode"
+"Mode/Mode"
+"Mode/StartMenuMode"
 "stdafx"
 )
 
