@@ -95,8 +95,9 @@ ${CW_PCH_SUBDIR}/${CW_PCH_CPP}
 
 # Set Visual Studio filter
 FOREACH(subdir ${CW_SOURCE_SUBDIRS})
+	STRING(REPLACE "/" "\\" tempSubdir ${subdir})
 	FILE(GLOB subdir_files ${CW_SOURCE_DIR}/${subdir}/*.cpp ${CW_SOURCE_DIR}/${subdir}/*.h)
-    SOURCE_GROUP(${subdir} FILES ${subdir_files})
+    SOURCE_GROUP(${tempSubdir} FILES ${subdir_files})
 ENDFOREACH()
 
 # Link external libraries
