@@ -18,7 +18,8 @@ namespace CW
 	class Mode
 	{
 	public:
-		virtual ~Mode() = 0 {}
+		Mode();
+		virtual ~Mode();
 
 		virtual void Initialize(const std::shared_ptr<FG::Window>& window);
 		virtual void Destroy();
@@ -27,11 +28,13 @@ namespace CW
 
 		std::shared_ptr<FG::Window> GetWindow() const { return mWindow; }
 	protected:
+		virtual void InitializeGraphics();
+
 		virtual void Update(std::chrono::system_clock::duration dt) = 0;
 		virtual void Draw(std::chrono::system_clock::duration dt) = 0;
 
 		// UI variables
-		FG::UIManager* mUIM;
+		std::unique_ptr<FG::UIManager> mUIM;
 
 		// Graphics variables
 		std::shared_ptr<FG::Window> mWindow;

@@ -14,11 +14,9 @@ namespace CW
 {
 	GameMode::GameMode()
 	{
-		mUIM = new FG::UIManager;
 	}
 	GameMode::~GameMode()
 	{
-		delete mUIM;
 	}
 
 	void GameMode::Initialize(const std::shared_ptr<FG::Window>& window)
@@ -29,13 +27,6 @@ namespace CW
 		mMap->Initialize();
 		currentTime = std::chrono::system_clock::now();
 		mSelectedUnit = nullptr;
-
-		mKeyboard.reset(new FG::KeyboardInput);
-		mMouse.reset(new FG::MouseInput);
-
-		window->RegisterInput(mKeyboard);
-		window->RegisterInput(mMouse);
-		mMouse->SetScreenSize(window->GetScreenWidth(), window->GetScreenHeight());
 
 		InitializeGraphics();
 	}

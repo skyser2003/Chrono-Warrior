@@ -26,7 +26,7 @@ namespace CW
 		// Graphics
 		virtual void Draw(std::chrono::system_clock::duration dt) override;
 
-		void InitializeGraphics();
+		virtual void InitializeGraphics() override;
 
 		void DrawTile(Tile* tile);
 		void DrawUnit(FieldUnit* unit);

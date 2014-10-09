@@ -55,40 +55,10 @@ namespace CW
 
 	void GameMode::InitializeGraphics()
 	{
-		HRESULT result;
-		std::string vsFileName = "../Shaders/vstexture.hlsl";
-		std::string psTextureFileName = "../Shaders/pstexture.hlsl";
-		std::string psColorFileName = "../Shaders/pscolor.hlsl";
-
-		mCanvas = &GetWindow()->GetCanvas();
-
-		mVS = mCanvas->CreateVertexShader();
-		result = mVS->CompileShader(vsFileName.c_str(), "VertexTextureMain");
-		if (FAILED(result))
-		{
-			MessageBox(mCanvas->GetGraphics()->GetHwnd(), "Error compiling shader.  Check shader-error.txt for message.", vsFileName.c_str(), MB_OK);
-			return;
-		}
-
-		mVS->SetupShaderBufferInputType("POSITION");
-		mVS->SetupShaderBufferInputType("COLOR");
-		mVS->SetupShaderBufferInputType("TEXCOORD");
-		mVS->CreateShaderBufferDesc();
-		mVS->CreateCBufferDesc("matrix", sizeof(FG::MatrixBufferType));
-
-		mPS = mCanvas->CreatePixelShader();
-		//result = mPS->CompileShader(psColorFileName.c_str(), "PixelColorMain");
-		result = mPS->CompileShader(psTextureFileName.c_str(), "PixelTextureMain");
-		if (FAILED(result))
-		{
-			MessageBox(mCanvas->GetHwnd(), "Error compiling shader.  Check shader-error.txt for message.", psTextureFileName.c_str(), MB_OK);
-			return;
-		}
-		mPS->CreateSamplerState();
+		Mode::InitializeGraphics();
 
 		auto& tm = mCanvas->GetTextureManager();
-		tm.SetDevice(mCanvas->GetDevice());
-
+		
 		mLemon = tm.CreateTexture("../Data/img/lemon.jpg");
 		mApple = tm.CreateTexture("../Data/img/apple.jpg");
 		mSoldier = tm.CreateTexture("../Data/img/scv.jpg");
