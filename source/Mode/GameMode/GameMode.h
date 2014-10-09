@@ -3,18 +3,6 @@
 #include "Mode/Mode/Mode.h"
 #include "Logic/Position/Position.h"
 
-namespace FG
-{
-	class DxCanvas;
-	class VertexShader;
-	class PixelShader;
-	class TextureClass;
-	class KeyboardInput;
-	class MouseInput;
-
-	class UIManager;
-}
-
 namespace CW
 {
 	class Map;
@@ -51,20 +39,6 @@ namespace CW
 		std::chrono::system_clock::time_point currentTime;
 		std::shared_ptr<Map> mMap;
 		std::shared_ptr<FieldUnit> mSelectedUnit;
-
-		// UI variables
-		FG::UIManager* mUIM;
-
-		// Graphics variables
-		FG::DxCanvas* mCanvas;
-		std::shared_ptr<FG::VertexShader> mVS;
-		std::shared_ptr<FG::PixelShader> mPS;
-
-		std::shared_ptr<FG::KeyboardInput> mKeyboard;
-		std::shared_ptr<FG::MouseInput> mMouse;
-
-		std::shared_ptr<FG::TextureClass> mLemon, mApple;
-		std::shared_ptr<FG::TextureClass> mSoldier, mMage;
 
 		// Canvas
 		const int mTileWidth = 50;
